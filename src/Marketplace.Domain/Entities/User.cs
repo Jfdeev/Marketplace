@@ -1,4 +1,4 @@
-﻿using Marketplace.Domain.Entites;
+﻿using Marketplace.Domain.Entities;
 using Marketplace.Domain.ValueObjects;
 
 namespace Marketplace.Domain.Entities;
