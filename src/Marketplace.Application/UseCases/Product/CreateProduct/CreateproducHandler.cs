@@ -33,7 +33,6 @@ public class CreateProductHandler : IRequestHandler<CreateProductCommand, Produc
             product.Price.Amount,
             product.Price.Currency,
             product.Stock,
-            product.ImageUrl,
             product.IsActive,
             product.CreatedAt,
             product.UpdatedAt

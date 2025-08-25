@@ -7,7 +7,6 @@ public record ProductDto(
     decimal Price,
     string Currency,
     int Stock,
-    string? ImageUrl,
     bool IsActive,
     DateTime CreatedAt,
     DateTime? UpdatedAt

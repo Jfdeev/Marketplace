@@ -9,7 +9,6 @@ public class Product
     public string Description { get; private set; }
     public Money Price { get; private set; }
     public int Stock { get; private set; }
-    public string? ImageUrl { get; private set; }
     public bool IsActive { get; private set; }
     public DateTime CreatedAt { get; private set; }
     public DateTime? UpdatedAt { get; private set; }
@@ -32,7 +31,6 @@ public class Product
         Description = description;
         Price = price;
         Stock = stock;
-        ImageUrl = imageUrl;
         IsActive = true;
         CreatedAt = DateTime.UtcNow;
     }
