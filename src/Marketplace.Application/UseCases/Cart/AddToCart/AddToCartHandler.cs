@@ -42,11 +42,10 @@ public class AddToCartHandler : IRequestHandler<AddToCartCommand, CartDto>
             cart.Id,
             cart.UserId,
             cart.Items.Select(i => new CartItemDto(
-                i.Id,
                 i.ProductId,
                 i.Product.Name,
-                i.Quantity,
                 i.UnitPrice.Amount,
+                i.Quantity,
                 i.GetTotal()
             )).ToList(),
             cart.GetTotal(),

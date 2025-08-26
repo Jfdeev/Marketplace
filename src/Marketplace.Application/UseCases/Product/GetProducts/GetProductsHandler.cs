@@ -28,7 +28,6 @@ public class GetProductsHandler : IRequestHandler<GetProductsQuery, IEnumerable<
             p.Price.Amount,
             p.Price.Currency,
             p.Stock,
-            p.ImageUrl,
             p.IsActive,
             p.CreatedAt,
             p.UpdatedAt
