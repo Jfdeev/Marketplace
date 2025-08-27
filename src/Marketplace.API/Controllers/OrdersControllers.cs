@@ -15,6 +15,7 @@ public class OrdersController : ControllerBase
         _mediator = mediator;
     }
 
+    [HttpPost]
     public async Task<IActionResult> CreateOrder(
         Guid userId,
         CancellationToken cancellationToken = default)
