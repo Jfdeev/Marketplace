@@ -35,6 +35,7 @@ O marketplace já conta com funcionalidades principais:
 - **MediatR** (CQRS)  
 - **FluentValidation**  
 - **Swagger/OpenAPI**  
+- Testes: **xUnit + FluentAssertions + Moq**
 
 ---
 
@@ -45,3 +46,54 @@ O marketplace já conta com funcionalidades principais:
 ```bash
 git clone https://github.com/Jfdeev/Marketplace.git
 cd Marketplace
+````
+
+2. Configure a connection string no `appsettings.json`:
+
+```json
+"ConnectionStrings": {
+  "DefaultConnection": "Host=localhost;Port=5432;Database=marketplace;Username=postgres;Password=SUA_SENHA;SSL Mode=Disable"
+}
+```
+
+3. Rode as migrations para criar o banco:
+
+```bash
+dotnet ef database update --project src/Marketplace.Infrastructure --startup-project src/Marketplace.API
+```
+
+4. Execute a API:
+
+```bash
+dotnet run --project src/Marketplace.API
+```
+
+5. Acesse o Swagger para testar os endpoints:
+
+```
+https://localhost:7000
+```
+
+---
+
+## Por que essa arquitetura?
+
+* Separação clara de responsabilidades, facilitando manutenção
+* Altamente testável graças a interfaces e dependency injection
+* Flexível: posso trocar banco ou framework sem afetar a camada de domínio
+* Escalável: consigo adicionar novas features sem quebrar código existente
+* Princípios **SOLID** aplicados em todas as camadas
+
+---
+
+## Próximos passos que posso implementar
+
+* Autenticação com **JWT**
+* Integração com gateways de pagamento reais
+* Notificações por email ou push
+* Relatórios e dashboards de vendas
+
+---
+
+Feito com ❤️ por Jfdeev
+
