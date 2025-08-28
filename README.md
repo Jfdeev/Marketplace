@@ -35,7 +35,6 @@ O marketplace já conta com funcionalidades principais:
 - **MediatR** (CQRS)  
 - **FluentValidation**  
 - **Swagger/OpenAPI**  
-- Testes: **xUnit + FluentAssertions + Moq**
 
 ---
 
